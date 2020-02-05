@@ -1,0 +1,28 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1>Staff List</h1>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Staff ID</th>
+          <th> Staff Name </th>
+          <th> Profession </th>
+          <th> Salary </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let staff of staffs | async">
+          <td>{{staff._id}}</td>
+          <td>{{staff.staffName}}</td>
+          <td>{{staff.profession}}</td>
+          <td>{{staff.salary}}</td>
+          <td><button (click)="deleteStaff(staff._id)">Delete</button>
+            <button (click)="staffDetails(staff._id)" style="margin-left: 10px">Details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

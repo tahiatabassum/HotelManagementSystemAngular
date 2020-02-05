@@ -1,0 +1,19 @@
+<h2>Staff Details</h2> 
+
+<hr/>
+<div *ngIf="staff">
+  <div>
+    <label><b>staffName: </b></label> {{staff.staffName}}
+  </div>
+  <div>
+    <label><b>profession: </b></label> {{staff.profession}}
+  </div>
+  <div>
+    <label><b>salary: </b></label> {{staff.salary}}
+  </div>  
+</div>
+<span class="button is-small btn-danger" (click)='deleteEmployee()'>Delete</span>
+<hr/>
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Staff List</button><br>
